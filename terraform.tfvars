@@ -2,8 +2,8 @@
 ######Informações referentes ao VMWare - vSphere ###############
 ################################################################
 vsphere_server = "homolvc.cjf.homol"
-vsphere_user = "administrator@vsphere.homol"
-vsphere_password = "HOMOLcjf@123"
+#vsphere_user = "user@teste.org"
+#vsphere_password = "1234abcd"
 vsphere_dc = "HOMOL-DC"
 vsphere_datastore_name = "FC_SATA_vSPHERE_HOMOL_01"
 #vsphere_cluster= "Gen10_HOMOL"
