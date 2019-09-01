@@ -44,6 +44,10 @@ Antes de aplicar qualquer configuração é executado uma plano de execução qu
 ## Arquitetura
 Para demonstrar o funcionamento do terraform será realizado o provisionamento de 9 máquinas virtuais no VMWare vSphere, estas máquinas seram utilizadas para criar o ambiente de homologação do OKD 3.11, segue a baixo informações da arquitetura necessária:
 
+![Arquitetura](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/Desenho1.jpg)
+
+
+
 
 
 
