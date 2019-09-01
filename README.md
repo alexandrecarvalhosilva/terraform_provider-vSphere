@@ -1,4 +1,4 @@
-# Provisionamento de hosts no VMWare-vSphere para a instalação ambiente de homologação OKD 3.11 utilizando Terraform
+# Provisionamento de hosts no VMWare-vSphere para instalar ambiente de homologação OKD 3.11, utilizando Terraform.
 
 
 ## Infra-Estrutura Ágil e Terraform
