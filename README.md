@@ -195,7 +195,15 @@ Digite yes para prosseguir com o provisionamento dos hosts.
 
 ##### Antes de executar terraform apply
 
-![Antes](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/Vcenter1.jpg)
+![Antes](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/Vcenter1.png)
 
 ##### Depois de executar terraform apply 
-![Depois](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/vcenter2.jpg)
+![Depois](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/vcenter2.png)
+
+##### Remover maquinas Virtuais 
+```sh
+$ terraform destroy
+
+```
+
+O comando destry remove todas as maquinas que foram criadas no vsphere.
