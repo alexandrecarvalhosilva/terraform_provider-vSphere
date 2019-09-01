@@ -100,3 +100,102 @@ $ vim main.tf
 É no aquivo main.tf que é instanciado o provider do vsphere e aplicado as configurações de acesso ao mesmo. Neste mesmo arquivo é realizado o clone do templete e aplicado as configurações especificas a cada host.
 
 # Executando o Terraform
+
+O primeiro comando a ser executado para uma nova configuração é o “terraform init” que inicializa várias configurações e dados locais que serão usados pelos comandos subseqüentes. 
+O Terraform usa uma arquitetura baseada em plugins para suportar os inúmeros fornecedores de infra-estrutura e serviços disponíveis. Cada “Provider” é um binário encapsulado e distribuído separadamente pelo próprio Terraform. O Comando “init” baixará e instará automaticamente qualquer binário Provider.
+
+##### Inicar terraform
+```sh
+$ terraform init
+```
+Para verificar se existe algum erro de sintaxe nos arquivos de configuração e também validar quais as configurações que seram aplicadas é executado o comando "plan"
+
+```sh
+$ terraform plan
+```
+```sh
+...
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Warning: Value for undeclared variable
+
+ on terraform.tfvars line 1:
+ 1: vphere_server = "vcenter.cjf.local"
+
+The root module does not declare a variable named "vphere_server". To use this
+value, add a "variable" block to the configuration.
+
+Using a variables file to set an undeclared variable is deprecated and will
+become an error in a future release. If you wish to provide certain "global"
+settings to all configurations in your organization, use TF_VAR_...
+environment variables to set these instead.
+
+
+------------------------------------------------------------------------
+
+Note: You didn't specify an "-out" parameter to save this plan, so Terraform
+can't guarantee that exactly these actions will be performed if
+
+```
+
+O comando apply aplica as configurações e clonas as maquinas virtuais com as customizações especificas de cada host
+
+```sh
+$ terraform apply
+
+```
+
+```sh
+      + disk {
+          + attach           = false
+          + datastore_id     = "<computed>"
+          + device_address   = (known after apply)
+          + disk_mode        = "persistent"
+          + disk_sharing     = "sharingNone"
+          + eagerly_scrub    = false
+          + io_limit         = -1
+          + io_reservation   = 0
+          + io_share_count   = 0
+          + io_share_level   = "normal"
+          + keep_on_remove   = false
+          + key              = 0
+          + label            = "disck2"
+          + path             = (known after apply)
+          + size             = 80
+          + thin_provisioned = true
+          + unit_number      = 2
+          + uuid             = (known after apply)
+          + write_through    = false
+        }
+
+      + network_interface {
+          + adapter_type          = "vmxnet3"
+          + bandwidth_limit       = -1
+          + bandwidth_reservation = 0
+          + bandwidth_share_count = (known after apply)
+          + bandwidth_share_level = "normal"
+          + device_address        = (known after apply)
+          + key                   = (known after apply)
+          + mac_address           = (known after apply)
+          + network_id            = "dvportgroup-114527"
+        }
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+```
+```sh
+
+Digite yes para prosseguir com o provisionamento dos hosts.
+
+##### Antes de executar terraform apply
+
+![Antes](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/Vcenter1.jpg)
+
+##### Depois de executar terraform apply 
+![Depois](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/vcenter2.jpg)
