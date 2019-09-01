@@ -25,4 +25,4 @@ Integração contínua (CI) é a prática de desenvolvimento de software que obj
 
 Orquestradores são ferramentas que nos permitem controlar instâncias/nodes de nosso parque em tempo real e a executar comandos. São exemplos de ferramentas de orquestração Fabric, Capistano, Func e Mcollective.
 
-teste
+testexxxsdfsdf
