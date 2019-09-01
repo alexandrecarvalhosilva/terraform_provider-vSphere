@@ -25,4 +25,23 @@ Integração contínua (CI) é a prática de desenvolvimento de software que obj
 
 Orquestradores são ferramentas que nos permitem controlar instâncias/nodes de nosso parque em tempo real e a executar comandos. São exemplos de ferramentas de orquestração Fabric, Capistano, Func e Mcollective.
 
-testexxxsdfsdfsasdasd
+E por último as ferramentas de bootstrapping, objeto deste post, aquelas ferramentas que nos ajudam a instalar um sistema operacional, a criar uma infraestrutura, seja máquinas físicas ou virtuais, ou até um instância em cloud. 
+
+Se compararmos o Puppet com o Terraform, o Terraform é responsável por criar a infra-estrutura que o Puppet irá gerenciar e o Puppet responsável por gerencial uma infra-estrutura que já existe.
+
+Como exemplo temos Terraform, ferramenta opensource desenvolvida pela Hashicorps em 2014 pelo próprio Mitchell Hashimoto, ferramenta focada em provisionar infra-estrutura e bootstrapping, possui uma linguagem própria chamada HCL – Hashicorp Configuration Language, e opcionalmente pode ser usado JSON. 
+
+O Terrraform possui diversos [Providers](https://www.terraform.io/docs/providers/index.html), segue alguns bem populares: AWS, DigitalOcean, GCE e Azure, VMWare. 
+
+Apesar de ser considerado MultiCloud o Terraform não abstrai a infra-estrutura, ou seja, um arquivo terraform que provisiona uma instância na Azure é diferente de um arquivo que provisiona uma máquina na AWS por exemplo. Este conceito pode parecer que dificulta a coisa, mas, na verdade, facilita pois quanto maior a abstração maior a complexidade. 
+
+Os arquivos de configuração são em formato texto que devem ser salvos em “.tf” para serem interpretados pelo terraform, possuem um formata específico da linguagem HCL. 
+
+Antes de aplicar qualquer configuração é executado uma plano de execução que relaciona o que será feito caso seja aplicado o terraform. 
+
+Para demonstrar o funcionamento do terraform será realizado o provisionamento de 9 máquinas virtuais no VMWare vSphere, estas máquinas seram utilizadas para criar o ambiente de homologação do OKD 3.11, segue a baixo informações da arquitetura necessária:
+
+
+
+
+
