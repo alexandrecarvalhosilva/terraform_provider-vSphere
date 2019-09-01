@@ -60,7 +60,7 @@ Para demonstrar o funcionamento do terraform será realizado o provisionamento d
 |   lb1    | 10.4.250.33 |   8  |  16GB  | 60GB,20GB e 80GB |
 |   lb2    | 10.4.250.35 |   8  |  16GB  | 60GB,20GB e 80GB |
 
-# Instalação Terraform
+# Instalação Terraform 
 
 ##### Baixar pacote
 ```sh
@@ -77,7 +77,26 @@ $ unzip ./terraform_0.11.13_linux_amd64.zip -d /usr/local/bin
 $ git clone https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere.git
 $ cd ./terraform_provider-vSphere
 ```
-##### Declarar variáveis
+# Editar arquivos de configuração do terraform
+
+##### Declarar variáveis, editar [variables.tf](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/variables.tf)
 ```sh
-$ vim [variables.tf](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/variables.tf)
+$ vim variables.tf
 ```
+Neste arquivo são declarados as variáveis que serão utilizadas pelo Terraform e quais são os tipos de variáveis, neste exemplo utilizamos variáveis do tipo string,list e number.
+
+##### Atribuir valores as variáveis declaradas, editar [terraform.tfvars](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/terraform.tfvars)
+```sh
+$ vim terraform.tfvars
+```
+O arquivo terraform.tfvars tem a função de atribuir valores às variáveis declaradas no arquivo variables.tf, com está separação em arquivos diferente viabiliza a execução de diferentes planos de provisionamentos. Exemplo: 
+```sh
+$ terraform apply -var-file="outro.tfvars"
+```
+##### Criar resourse e definir configurações, editar [main.tf](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/main.tf)
+```sh
+$ vim main.tf
+```
+É no aquivo main.tf que é instanciado o provider do vsphere e aplicado as configurações de acesso ao mesmo. Neste mesmo arquivo é realizado o clone do templete e aplicado as configurações especificas a cada host.
+
+# Executando o Terraform
