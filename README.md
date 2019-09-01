@@ -145,7 +145,8 @@ $ terraform apply
 
 ```
 
-```sh
+
+
       + disk {
           + attach           = false
           + datastore_id     = "<computed>"
@@ -188,8 +189,8 @@ Do you want to perform these actions?
   Only 'yes' will be accepted to approve.
 
   Enter a value: yes
-```
-```sh
+
+
 
 Digite yes para prosseguir com o provisionamento dos hosts.
 
@@ -198,9 +199,12 @@ Digite yes para prosseguir com o provisionamento dos hosts.
 ![Antes](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/Vcenter1.png)
 
 ##### Depois de executar terraform apply 
+
 ![Depois](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/vcenter2.png)
 
 ##### Remover maquinas Virtuais 
+
+
 ```sh
 $ terraform destroy
 
