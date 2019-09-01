@@ -1,7 +1,7 @@
 #################################################3##############
 ######Informações referentes ao VMWare - vSphere ###############
 ################################################################
-vsphere_server = "homolvc.cjf.homol"
+vsphere_server = "homolvc.teste.homol"
 #vsphere_user = "user@teste.org"
 #vsphere_password = "1234abcd"
 vsphere_dc = "HOMOL-DC"
@@ -21,11 +21,11 @@ vsphere_rede= "HOMOL-Gerencia"
 vsphere_qtd_hosts = 9
 vsphere_namevm = ["master1","master2","master3","node1","node2","node3","node4","lb1","lb2"]
 vsphere_hostname = ["master1","master2","master3","node1","node2","node3","node4","lb1","lb2"]
-vsphere_domain = "apps.cjf.local"
+vsphere_domain = "apps.teste.local"
 vsphere_ip = ["10.4.250.26","10.4.250.27","10.4.250.28","10.4.250.29","10.4.250.30","10.4.250.31","10.4.250.32","10.4.250.33","10.4.250.34"]
 vsphere_ipmask = "24"
 vsphere_gateway = "10.4.250.254"
-vsphere_dns_domain = "apps.cjf.local"
+vsphere_dns_domain = "apps.teste.local"
 vsphere_dns_server_list = "10.4.250.25"
 vsphere_cpus = "8"
 vsphere_memory = "16384"
