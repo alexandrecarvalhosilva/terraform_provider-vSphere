@@ -206,4 +206,7 @@ $ terraform destroy
 
 ```
 
-O comando destry remove todas as maquinas que foram criadas no vsphere.
+O comando destroy remove todas as maquinas que foram criadas no vsphere.
+
+# Autor
+- Alexandre Carvalho da Silva
