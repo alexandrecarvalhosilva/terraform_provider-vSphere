@@ -47,6 +47,19 @@ Para demonstrar o funcionamento do terraform será realizado o provisionamento d
 ![Arquitetura](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/imagens/Desenho1.jpg)
 
 
+| Hostname | IP Address  | Proc |  Mem   | Disk |
+| -------- | ----------  | ---- |  ----  | ---- |
+| infra    | 10.4.250.25 |   8  |  16GB  | 60GB,20GB e 80GB |
+| master1  | 10.4.250.26 |   8  |  16GB  | 60GB,20GB e 80GB | 
+| master2  | 10.4.250.27 |   8  |  16GB  | 60GB,20GB e 80GB |
+| master3  | 10.4.250.28 |   8  |  16GB  | 60GB,20GB e 80GB |
+|  node1   | 10.4.250.29 |   8  |  16GB  | 60GB,20GB e 80GB |
+|  node2   | 10.4.250.30 |   8  |  16GB  | 60GB,20GB e 80GB |
+|  node3   | 10.4.250.31 |   8  |  16GB  | 60GB,20GB e 80GB |
+|  node4   | 10.4.250.32 |   8  |  16GB  | 60GB,20GB e 80GB |
+|   lb1    | 10.4.250.33 |   8  |  16GB  | 60GB,20GB e 80GB |
+|   lb2    | 10.4.250.35 |   8  |  16GB  | 60GB,20GB e 80GB |
+
 
 
 
