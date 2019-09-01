@@ -3,7 +3,7 @@
 
 ## Infra-estrutura Ágil e Terraform
 
-Antes de entendermos como funciona o Terraform é necessário compreender um pouco do que se trata infra-estrutura ágil e que tem a ver com isso. 
+Antes de entendermos como funciona o Terraform é necessário compreender um pouco do que se trata infra-estrutura ágil e onde o terraform se encaixa. 
 
 ### Infra-estrutura Ágil
 
@@ -60,8 +60,24 @@ Para demonstrar o funcionamento do terraform será realizado o provisionamento d
 |   lb1    | 10.4.250.33 |   8  |  16GB  | 60GB,20GB e 80GB |
 |   lb2    | 10.4.250.35 |   8  |  16GB  | 60GB,20GB e 80GB |
 
+# Instalação Terraform
 
+##### Baixar pacote
+```sh
+$ wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
+```
 
+##### Descompactar pacote
+```sh
+$ unzip ./terraform_0.11.13_linux_amd64.zip -d /usr/local/bin
+```
 
-
-
+##### Clonar repositorio
+```sh
+$ git clone https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere.git
+$ cd ./terraform_provider-vSphere
+```
+##### Declarar variáveis
+```sh
+$ vim [variables.tf](https://github.com/alexandrecarvalhosilva/terraform_provider-vSphere/blob/master/variables.tf)
+```
