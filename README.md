@@ -27,6 +27,8 @@ Orquestradores são ferramentas que nos permitem controlar instâncias/nodes de 
 
 E por último as ferramentas de bootstrapping, objeto deste post, aquelas ferramentas que nos ajudam a instalar um sistema operacional, a criar uma infraestrutura, seja máquinas físicas ou virtuais, ou até um instância em cloud. 
 
+### Terraform
+
 Se compararmos o Puppet com o Terraform, o Terraform é responsável por criar a infra-estrutura que o Puppet irá gerenciar e o Puppet responsável por gerencial uma infra-estrutura que já existe.
 
 Como exemplo temos Terraform, ferramenta opensource desenvolvida pela Hashicorps em 2014 pelo próprio Mitchell Hashimoto, ferramenta focada em provisionar infra-estrutura e bootstrapping, possui uma linguagem própria chamada HCL – Hashicorp Configuration Language, e opcionalmente pode ser usado JSON. 
@@ -39,6 +41,7 @@ Os arquivos de configuração são em formato texto que devem ser salvos em “.
 
 Antes de aplicar qualquer configuração é executado uma plano de execução que relaciona o que será feito caso seja aplicado o terraform. 
 
+## Arquitetura
 Para demonstrar o funcionamento do terraform será realizado o provisionamento de 9 máquinas virtuais no VMWare vSphere, estas máquinas seram utilizadas para criar o ambiente de homologação do OKD 3.11, segue a baixo informações da arquitetura necessária:
 
 
