@@ -24,3 +24,5 @@ Ferramentas de gerenciamento de configuração servem para assegurar que os sist
 Integração contínua (CI) é a prática de desenvolvimento de software que objetiva tornar a entrega do código mais eficiente, através de builds automatizadas e execução de tarefas definidas previamente como, por exemplo, testes automatizados. Jenkins, TeamCity, Go, etc. são algumas das ferramentas CI/CD disponíveis no mercado.
 
 Orquestradores são ferramentas que nos permitem controlar instâncias/nodes de nosso parque em tempo real e a executar comandos. São exemplos de ferramentas de orquestração Fabric, Capistano, Func e Mcollective.
+
+teste
