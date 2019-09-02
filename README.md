@@ -37,7 +37,7 @@ O Terrraform possui diversos [Providers](https://www.terraform.io/docs/providers
 
 Apesar de ser considerado MultiCloud o Terraform não abstrai a infra-estrutura, ou seja, um arquivo terraform que provisiona uma instância na Azure é diferente de um arquivo que provisiona uma máquina na AWS por exemplo. Este conceito pode parecer que dificulta a coisa, mas na verdade, facilita pois quanto maior a abstração maior a complexidade. 
 
-Os arquivos de configuração são em formato texto que devem ser salvos em “.tf” para serem interpretados pelo terraform, possuem um formata específico da linguagem HCL. 
+Os arquivos de configuração são em formato texto que devem ser salvos em “.tf” para serem interpretados pelo terraform, possuem um formato específico da linguagem HCL. 
 
 Antes de aplicar qualquer configuração é executado uma plano de execução que relaciona o que será feito caso seja aplicado o terraform. 
 
@@ -102,7 +102,7 @@ $ vim main.tf
 # Executando o Terraform
 
 O primeiro comando a ser executado para uma nova configuração é o “terraform init” que inicializa várias configurações e dados locais que serão usados pelos comandos subsequentes. 
-O Terraform usa uma arquitetura baseada em plugins para suportar os inúmeros fornecedores de infra-estrutura e serviços disponíveis. Cada “Provider” é um binário encapsulado e distribuído separadamente pelo próprio Terraform. O Comando “init” baixará e instará automaticamente qualquer binário Provider.
+O Terraform usa uma arquitetura baseada em plugins para suportar os inúmeros fornecedores de infra-estrutura e serviços disponíveis. Cada “Provider” é um binário encapsulado e distribuído separadamente pelo próprio Terraform. O Comando “init” irá baixar e instalar automaticamente qualquer binário Provider.
 
 ##### Inicar terraform
 ```sh
