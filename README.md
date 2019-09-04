@@ -1,21 +1,21 @@
 # Provisionamento de hosts no VMWare-vSphere utilizando Terraform.
 
 
-## Infra-Estrutura Ágil e Terraform
+## Infraestrutura Ágil e Terraform
 
-Antes de entendermos como funciona o Terraform é necessário compreender um pouco do que se trata a infra-estrutura ágil e, onde o terraform se encaixa. 
+Antes de entendermos como funciona o Terraform é necessário compreender um pouco do que se trata a infraestrutura ágil e, onde o terraform se encaixa. 
 
 ### Infra-Estrutura Ágil
 
-Infra-estrutura ágil é o pilar de operação que viabiliza a adoção de cultura DevOps em uma empresa. O DevOps tem um escopo muito maior pois visa a união de Desenvolvedores e SysAdmins, enquanto a infra-estrutura ágil é um movimento que visa tornar a infra-estrutura automatizada, orquestrada, versionada, monitorada, sendo tudo provisionado como código. Desta forma torna-se possível falar sobre DevOps.
+Infraestrutura ágil é o pilar de operação que viabiliza a adoção de cultura DevOps em uma empresa. O DevOps tem um escopo muito maior pois visa a união de Desenvolvedores e SysAdmins, enquanto a infraestrutura ágil é um movimento que visa tornar a infra-estrutura automatizada, orquestrada, versionada, monitorada, sendo tudo provisionado como código. Desta forma torna-se possível falar sobre DevOps.
 
-Para entendermos sobre infra-estrutura ágil precisamos compreender os 5 tipos de ferramentas:
+Para entendermos sobre infraestrutura ágil precisamos compreender os 5 tipos de ferramentas:
 
 - Ferramentas de controle de versão; 
 - Ferramentas de gerenciamento de configuração; 
 - Integração continua; 
 - Orquestração; 
-- Ferramentas para bootstrapping e provisionamento de infra-estrutura.
+- Ferramentas para bootstrapping e provisionamento de infraestrutura.
 
 Ferramentas de controle de versão são ferramentas que registram as mudanças feitas em um arquivo ou um conjunto de arquivos ao longo do tempo, de forma que você possa recuperar versões específicas. Algumas delas são: git, subversion, mercurial, performace.
 
@@ -29,13 +29,13 @@ E por último as ferramentas de bootstrapping, objeto deste post, aquelas ferram
 
 ### Terraform
 
-Se compararmos o Puppet com o Terraform, o Terraform é responsável por criar a infra-estrutura que o Puppet irá gerenciar e o Puppet é responsável por gerenciar uma infra-estrutura que já existe.
+Se compararmos o Puppet com o Terraform, o Terraform é responsável por criar a infraestrutura que o Puppet irá gerenciar e o Puppet é responsável por gerenciar uma infraestrutura que já existe.
 
-Como exemplo temos Terraform, ferramenta opensource desenvolvida pela Hashicorps em 2014 pelo próprio Mitchell Hashimoto, ferramenta focada em provisionar infra-estrutura e bootstrapping, possui uma linguagem própria chamada HCL – Hashicorp Configuration Language, e opcionalmente pode ser usado JSON. 
+Como exemplo temos Terraform, ferramenta opensource desenvolvida pela Hashicorps em 2014 pelo próprio Mitchell Hashimoto, ferramenta focada em provisionar infraestrutura e bootstrapping, possui uma linguagem própria chamada HCL – Hashicorp Configuration Language, e opcionalmente pode ser usado JSON. 
 
 O Terrraform possui diversos [Providers](https://www.terraform.io/docs/providers/index.html), segue alguns bem populares: AWS, DigitalOcean, GCE e Azure, VMWare. 
 
-Apesar de ser considerado MultiCloud o Terraform não abstrai a infra-estrutura, ou seja, um arquivo terraform que provisiona uma instância na Azure é diferente de um arquivo que provisiona uma máquina na AWS por exemplo. Este conceito pode parecer que dificulta a coisa, mas na verdade, facilita pois quanto maior a abstração maior a complexidade. 
+Apesar de ser considerado MultiCloud o Terraform não abstrai a infraestrutura, ou seja, um arquivo terraform que provisiona uma instância na Azure é diferente de um arquivo que provisiona uma máquina na AWS por exemplo. Este conceito pode parecer que dificulta a coisa, mas na verdade, facilita pois quanto maior a abstração maior a complexidade. 
 
 Os arquivos de configuração são em formato texto que devem ser salvos em “.tf” para serem interpretados pelo terraform, possuem um formato específico da linguagem HCL. 
 
@@ -102,7 +102,7 @@ $ vim main.tf
 # Executando o Terraform
 
 O primeiro comando a ser executado para uma nova configuração é o “terraform init” que inicializa várias configurações e dados locais que serão usados pelos comandos subsequentes. 
-O Terraform usa uma arquitetura baseada em plugins para suportar os inúmeros fornecedores de infra-estrutura e serviços disponíveis. Cada “Provider” é um binário encapsulado e distribuído separadamente pelo próprio Terraform. O Comando “init” irá baixar e instalar automaticamente qualquer binário Provider.
+O Terraform usa uma arquitetura baseada em plugins para suportar os inúmeros fornecedores de infraestrutura e serviços disponíveis. Cada “Provider” é um binário encapsulado e distribuído separadamente pelo próprio Terraform. O Comando “init” irá baixar e instalar automaticamente qualquer binário Provider.
 
 ##### Inicar terraform
 ```sh
@@ -214,8 +214,8 @@ O comando destroy remove todas as máquinas que foram criadas no vsphere.
 
 # Conclusão
 
-O terraform é mais um exemplo de ferramenta que possibilita termos uma infra-estrutura como código, como vimos no exemplo acima é possível escrever o código em uma linguagem simples, possui um documentação muito boa e é muito utilizado pela comunidade. 
-A utilização do terraform como provisionamento é capaz de realizar alterações complexas na infra-estrutura com o mínimo de interação humana. Com os planos de execução você sabe exatamente o que o terraform mudará e em que ordem, evitando muitos possíveis erros humanos.
+O terraform é mais um exemplo de ferramenta que possibilita termos uma infraestrutura como código, como vimos no exemplo acima é possível escrever o código em uma linguagem simples, possui um documentação muito boa e é muito utilizado pela comunidade. 
+A utilização do terraform como provisionamento é capaz de realizar alterações complexas na infraestrutura com o mínimo de interação humana. Com os planos de execução você sabe exatamente o que o terraform mudará e em que ordem, evitando muitos possíveis erros humanos.
 
 
 
