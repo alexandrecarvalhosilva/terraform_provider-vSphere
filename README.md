@@ -214,8 +214,8 @@ O comando destroy remove todas as máquinas que foram criadas no vsphere.
 
 # Conclusão
 
-O terraform é mais um exemplo de ferramanta que possibilita termos uma infra-estrutura como código, como vimos no exemplo acima é possível escrever o código em uma linguagem simples, possui um documentação muito boa e é muito utilizado pela comunidade. 
-A utilização do terraform como provisionamento é capaz de realizar varias alterações complexas na infra-estrutura com o mínimo de interação humana. Com os planos de execução você sabe exatamente o que o terraform mudará e em que ordem, evitando muitos possíveis erros humanos.
+O terraform é mais um exemplo de ferramenta que possibilita termos uma infra-estrutura como código, como vimos no exemplo acima é possível escrever o código em uma linguagem simples, possui um documentação muito boa e é muito utilizado pela comunidade. 
+A utilização do terraform como provisionamento é capaz de realizar alterações complexas na infra-estrutura com o mínimo de interação humana. Com os planos de execução você sabe exatamente o que o terraform mudará e em que ordem, evitando muitos possíveis erros humanos.
 
 
 
